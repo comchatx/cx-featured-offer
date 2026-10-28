@@ -1,0 +1,77 @@
+{
+  "name": "@comchatx/cx-featured-offer",
+  "version": "0.1.0",
+  "description": "Has cx guard your listings' Featured Offer (Buy Box): it fixes what you allowed, then reports.",
+  "license": "MIT",
+  "author": "ComChatX",
+  "comchatx": {
+    "about": "让 cx 守住 listing 的 Featured Offer（Buy Box）：在你允许的范围内先修，再告诉你。",
+    "description": "让 cx 守住你 listing 的 Featured Offer（Buy Box）。某个报价丢了 Featured Offer 时，cx 会先在你允许的范围内修复，再告诉你它发现了什么、改了什么、怎么改的。修不了的，cx 会给你一份方案，写明谁来做、做什么、去哪里做。\n\n## 怎么用\n\n- 输入 `/featured-offer-guard`，加上 ASIN 和你的要求。你的话里没说清的，cx 才会问：多久看一次、哪些可以不问你就改、价格最低不能低于多少，以及在哪里告诉你。\n- cx 会把你的话记成每个 listing 的执行说明，存在你的文件里，你可以随时查看和修改。\n- 有些原因 cx 能在你的店铺里直接修，比如价格高于能拿到 Featured Offer 的价格，或自发货报价的库存数量、处理时间。另一些需要你或亚马逊处理，比如给 FBA 补货、账户健康申诉、通过品牌备案举报，cx 会把它们写成方案交给你。\n\n## 它会用到\n\n它用 cx-listing-playbook 了解 Featured Offer 由什么决定，用 Amazon SP-API 读取和修改你的店铺，有 Keepa 时用它查看 Featured Offer 的历史，用 cx-schedule 定时，用 cx-feishu 在飞书里通知你。安装时会一并装好这些插件。\n\n## 费用\n\n检查只在 cx 的电脑开机时运行，开机时长和每次检查读取的数据都需要付费。",
+    "mark": {
+      "line": "target"
+    },
+    "section": "extensions",
+    "order": 54,
+    "tryIt": [
+      {
+        "en": "/featured-offer-guard {asin} If it loses the Buy Box, fix it above my floor price, then tell me in Feishu",
+        "zh": "/featured-offer-guard {asin} 丢了 Buy Box 先在底价以上修，修完在飞书告诉我"
+      }
+    ],
+    "needs": [
+      "@comchatx/cx-schedule",
+      "cx-feishu"
+    ],
+    "builds": [
+      "@comchatx/cx-schedule",
+      "cx-feishu",
+      "cx-listing-playbook",
+      "cx-amazon-sp-api",
+      {
+        "on": "cx-keepa",
+        "need": "optional"
+      }
+    ]
+  },
+  "homepage": "https://github.com/comchatx/cx-featured-offer#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comchatx/cx-featured-offer.git"
+  },
+  "bugs": "https://github.com/comchatx/cx-featured-offer/issues",
+  "keywords": [
+    "pi-package"
+  ],
+  "type": "module",
+  "pi": {
+    "prompts": [
+      "./prompts"
+    ]
+  },
+  "files": [
+    "prompts"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-ai": "1.1.0",
+    "@earendil-works/pi-coding-agent": "1.1.0",
+    "@types/node": "26.2.0",
+    "typescript": "7.0.2",
+    "vitest": "4.1.11"
+  },
+  "overrides": {
+    "@earendil-works/chord": "1.1.0",
+    "@earendil-works/pi-ai": "1.1.0",
+    "@earendil-works/pi-mcp": "1.1.0",
+    "@earendil-works/pi-tui": "1.1.0",
+    "@earendil-works/pi-codemode": "1.1.0",
+    "@earendil-works/pi-agent-core": "1.1.0",
+    "@earendil-works/pi-telemetry": "1.1.0"
+  }
+}
