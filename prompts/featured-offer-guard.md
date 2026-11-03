@@ -8,4 +8,4 @@ Write my standing instruction for each listing in /tenant/listings/<ASIN>/featur
 
 Unless my words say otherwise: when an offer loses the Featured Offer, first fix what lies within what I allowed, then tell me what you found, what you changed and how. What you cannot fix comes back to me as a plan that names who does what, and where.
 
-Then set the schedule, and report to me where I said.
+Then set the schedule, and report to me where I said. Where I said Feishu and no cx-feishu skill is listed, cx-feishu is not installed: tell me in this chat instead, each time, and say once that it installs from Plugins.
