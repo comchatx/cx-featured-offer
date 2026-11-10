@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.3
+
+- The card's line and the Overview, in English and Chinese, are the words signed on 2026-11-10: "Has cx guard your Buy Box and fix what you allow when it's lost." as npm's `description`, and 「让 cx 守住 Buy Box，失去时在你允许的范围内修复，再告诉你。」 as `comchatx.about`. They said "Has cx guard your listings' Featured Offer (Buy Box): it fixes what you allowed, then reports." and 「让 cx 守住 Buy Box，失去时在你允许的范围内修复，再告诉你。」.
+
 ## 0.1.2
 
 - The README in Chinese, `README.zh-CN.md`, which the Plugins page draws as the Overview in Chinese.

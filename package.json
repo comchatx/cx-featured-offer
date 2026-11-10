@@ -1,7 +1,7 @@
 {
   "name": "@comchatx/cx-featured-offer",
-  "version": "0.1.2",
-  "description": "Has cx guard your listings' Featured Offer (Buy Box): it fixes what you allowed, then reports.",
+  "version": "0.1.3",
+  "description": "Has cx guard your Buy Box and fix what you allow when it's lost.",
   "license": "MIT",
   "author": "ComChatX",
   "comchatx": {
