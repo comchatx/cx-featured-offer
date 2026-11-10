@@ -1,14 +1,12 @@
-Have cx guard the Featured Offer (the Buy Box) of your listings. When an offer loses it, cx first fixes what you allowed it to fix, then tells you what it found, what it changed and how. What it cannot fix comes back to you as a plan that names who does what, and where.
+When your offer loses the Buy&nbsp;Box, cx finds out why, fixes what you allowed it to, never below your floor price, and plans the rest for you. It needs cx-listing-playbook, Amazon SP-API and cx-schedule, which Plugins installs with it.
 
-## How it works
+Some things you can ask:
 
-- Type `/featured-offer-guard` with the ASINs and what you want. cx asks only what your words leave open: how often to look, what it may change without asking you, the price it never goes below, and where to tell you.
-- cx writes your words down as the instruction it follows for each listing, in your files, where you can read and change it.
-- Some causes cx can fix in your store, such as a price above what wins the Featured Offer, or the quantity or handling time of an offer you ship yourself. Others need you or Amazon, such as restocking FBA, an account health appeal or a report through Brand Registry, and come back to you as a plan.
+- Check B0EXAMPLE1's Buy&nbsp;Box every hour. If it's lost, don't change the price yet; tell me why.
+- Guard the Buy&nbsp;Box of B0EXAMPLE2 and B0EXAMPLE3 with a $19.99 floor, checking twice a day.
+- B0EXAMPLE1 ships by FBA. When it loses the Buy&nbsp;Box, remind me to restock.
 
-## What it uses
-
-It uses cx-listing-playbook for what decides the Featured Offer, Amazon SP-API for your store, Keepa for the Featured Offer's history where you have it, cx-schedule for the times, and cx-feishu to tell you in Feishu if you want it. Plugins installs the others with it; cx-feishu only if you choose it. Without cx-feishu, cx tells you in the chat.
+cx can fix causes such as a high price or low stock on an offer you ship yourself; restocking FBA or an account health appeal needs you or Amazon. With Keepa it also reads the Buy&nbsp;Box's history; with cx-feishu it tells you in Feishu, otherwise in the chat. Your words become a standing instruction for each listing, kept in your files, where you can read and change it.
 
 ## What it costs
 

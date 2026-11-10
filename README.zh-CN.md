@@ -1,14 +1,12 @@
-让 cx 为你的 listing 守住 Buy Box（Featured Offer）。你的报价失去 Buy Box 时，cx 会先在你允许的范围内修复，再告诉你它发现了什么、改了什么、怎么改的。修复不了的，cx 会写成一份计划交给你，写明谁在哪里做什么。
+你的报价失去 Buy&nbsp;Box 时，cx 会查出原因，店铺里能改的在你允许的范围内直接改，不低于你定的底价；要你或亚马逊处理的，写成计划交给你。它需要 cx-listing-playbook、Amazon SP-API 和 cx-schedule，「插件」页会一并安装。
 
-## 工作方式
+你可以这样问：
 
-- 输入 `/featured-offer-guard`，加上 ASIN 和你的要求。cx 只会问你没说清的部分：多久查看一次、哪些可以不问你就修改、底价是多少，以及在哪里告诉你。
-- cx 会把你的话写成每条 listing 的指令并照此执行，指令存在你的文件里，你可以查看和修改。
-- 有些原因 cx 能在你的店铺里解决，比如价格高于能赢得 Buy Box 的价格，或者自配送报价的库存数量或处理时间。另一些需要你或亚马逊来处理，比如为 FBA 补货、账户状况申诉，或通过亚马逊品牌注册提交举报，这些会写成计划交给你。
+- 每小时看一次 B0EXAMPLE1 的 Buy&nbsp;Box，丢了先别改价，告诉我原因。
+- 守住 B0EXAMPLE2 和 B0EXAMPLE3 的 Buy&nbsp;Box，底价 19.99 美元，每天查两次。
+- B0EXAMPLE1 是 FBA 发货，丢了 Buy&nbsp;Box 时提醒我补货。
 
-## 用到的插件
-
-它用 cx-listing-playbook 了解 Buy Box 由什么决定，用 Amazon SP-API 连接你的店铺，已安装 Keepa 时用它查看 Buy Box 的历史，用 cx-schedule 定时；如果你需要，还会用 cx-feishu 在飞书上通知你。「插件」页会一并安装其余几个，cx-feishu 只在你选择时安装。没有 cx-feishu 时，cx 会在对话中告诉你。
+cx 能直接改的是价格偏高、自配送报价库存不足这类问题；FBA 补货、账户状况申诉这类，要你或亚马逊处理。装了 Keepa 时，cx 还会看 Buy&nbsp;Box 的历史；装了 cx-feishu 时，cx 在飞书上告诉你，否则在对话里告诉你。你的要求会写成每条 listing 的指令，存在你的文件里，可以随时查看和修改。
 
 ## 费用
 
