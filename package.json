@@ -1,10 +1,11 @@
 {
   "name": "@comchatx/cx-featured-offer",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Has cx guard your Buy Box and fix what you allow when it's lost.",
   "license": "MIT",
   "author": "ComChatX",
   "comchatx": {
+    "name": "Amazon Buy Box Guard",
     "about": "让 cx 守住 Buy Box，失去时在你允许的范围内修复，再告诉你。",
     "mark": {
       "line": "target"

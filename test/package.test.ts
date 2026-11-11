@@ -51,3 +51,8 @@ it("the template's line is the signed words: English in its description, Chinese
   expect(manifest()["comchatx"]["prompts"]).toEqual({ "featured-offer-guard": { zh: "告诉 cx 守住哪些 listing 的 Buy Box，能改什么。" } });
   expect(manifest()["comchatx"]).not.toHaveProperty("tryIt");
 });
+
+it("the card's name is comchatx.name, the one signed on 2026-11-11", () => {
+  const field = (JSON.parse(readFileSync(join(ROOT, "package.json"), "utf8")) as { comchatx: { name?: unknown } }).comchatx;
+  expect(field.name).toBe("Amazon Buy Box Guard");
+});

@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.5
+
+- The card's name is the one signed on 2026-11-11, "Amazon Buy Box Guard", in `comchatx.name`, the same on the Chinese and the English page.
+- The README, in English and Chinese, calls each of our plugins by its card's name, not its npm name.
+
 ## 0.1.4
 
 - The template's line is the words signed on 2026-11-10: its `description` is "Tell cx which listings' Buy Box to guard and what it may change.", in English only, and `comchatx.prompts["featured-offer-guard"].zh` is 「告诉 cx 守住哪些 listing 的 Buy Box，能改什么。」.
