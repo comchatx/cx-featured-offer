@@ -1,5 +1,5 @@
 ---
-description: Have cx guard your listings' Featured Offer (Buy Box) — e.g. /featured-offer-guard <ASIN>,<ASIN> 丢了 Buy Box 先在底价以上修，修完在飞书告诉我
+description: Tell cx which listings' Buy Box to guard and what it may change.
 argument-hint: "<ASINs> <what you want, in your words>"
 ---
 Guard the Featured Offer of my listings $1 from my words: ${@:2}
