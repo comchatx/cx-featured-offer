@@ -6,7 +6,7 @@ Some things you can ask:
 - Guard the Buy&nbsp;Box of B0EXAMPLE2 and B0EXAMPLE3 with a $19.99 floor, checking twice a day.
 - B0EXAMPLE1 ships by FBA. When it loses the Buy&nbsp;Box, remind me to restock.
 
-cx can fix causes such as a high price or low stock on an offer you ship yourself; restocking FBA or an account health appeal needs you or Amazon. With Keepa it also reads the Buy&nbsp;Box's history; with Feishu it tells you in Feishu, otherwise in the chat. Your words become a standing instruction for each listing, kept in your files, where you can read and change it.
+cx can fix causes such as a high price or low stock on an offer you ship yourself; restocking FBA or an account health appeal needs you or Amazon. With Keepa API it also reads the Buy&nbsp;Box's history; with Feishu Connector it tells you in Feishu, otherwise in the chat. Your words become a standing instruction for each listing, kept in your files, where you can read and change it.
 
 ## What it costs
 
