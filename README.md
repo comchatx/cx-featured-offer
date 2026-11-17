@@ -1,4 +1,4 @@
-When your offer loses the Buy&nbsp;Box, cx finds out why, fixes what you allowed it to, never below your floor price, and plans the rest for you. It needs Amazon Listing Playbook, Amazon SP-API and Scheduled Tasks, which Plugins installs with it.
+When your offer loses the Buy&nbsp;Box, cx finds out why, fixes what you allowed it to, never below your floor price, and plans the rest for you. It needs [Amazon Listing Playbook](https://www.npmjs.com/package/cx-listing-playbook), [Amazon SP-API](https://www.npmjs.com/package/cx-amazon-sp-api) and [Scheduled Tasks](https://www.npmjs.com/package/@comchatx/cx-schedule), which Plugins installs with it.
 
 Some things you can ask:
 
@@ -6,7 +6,7 @@ Some things you can ask:
 - Guard the Buy&nbsp;Box of B0EXAMPLE2 and B0EXAMPLE3 with a $19.99 floor, checking twice a day.
 - B0EXAMPLE1 ships by FBA. When it loses the Buy&nbsp;Box, remind me to restock.
 
-cx can fix causes such as a high price or low stock on an offer you ship yourself; restocking FBA or an account health appeal needs you or Amazon. With Keepa API it also reads the Buy&nbsp;Box's history; with Feishu Connector it tells you in Feishu, otherwise in the chat. Your words become a standing instruction for each listing, kept in your files, where you can read and change it.
+cx can fix causes such as a high price or low stock on an offer you ship yourself; restocking FBA or an account health appeal needs you or Amazon. With [Keepa API](https://www.npmjs.com/package/cx-keepa) it also reads the Buy&nbsp;Box's history; with [Feishu Connector](https://www.npmjs.com/package/cx-feishu) it tells you in Feishu, otherwise in the chat. Your words become a standing instruction for each listing, kept in your files, where you can read and change it.
 
 ## What it costs
 
