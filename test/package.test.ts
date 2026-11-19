@@ -28,7 +28,7 @@ it("/featured-offer-guard shows as a command and expands with the seller's ASINs
 it("is @comchatx/cx-featured-offer; the Plugins page installs every borrowed plugin from builds, and needs names cx-schedule alone, cx-feishu optional", () => {
   expect([manifest()["name"], manifest()["repository"]["url"]]).toEqual(["@comchatx/cx-featured-offer", "git+https://github.com/comchatx/cx-featured-offer.git"]);
   expect(manifest()["comchatx"]["needs"]).toEqual(["@comchatx/cx-schedule"]);
-  expect(manifest()["comchatx"]["builds"]).toEqual(["@comchatx/cx-schedule", { on: "cx-feishu", need: "optional" }, "cx-listing-playbook", "cx-amazon-sp-api", { on: "cx-keepa", need: "optional" }]);
+  expect(manifest()["comchatx"]["builds"]).toEqual(["@comchatx/cx-schedule", { on: "cx-feishu", need: "optional", why: { en: "Sends each check's result to your Feishu group.", zh: "用于让 cx 把检查结果发到你的飞书群。" } }, "cx-listing-playbook", "cx-amazon-sp-api", { on: "cx-keepa", need: "optional", why: { en: "Lets cx read the Buy\u00a0Box's history as it looks for why.", zh: "用于让 cx 查原因时也看 Buy\u00a0Box 的历史。" } }, { on: "cx-amazon-seller", need: "optional", why: { en: "Tells cx from the start that you sell on Amazon.", zh: "用于让 cx 从第一条消息起就知道你在亚马逊开店。" } }]);
   expect(manifest()["pi"]).toEqual({ prompts: ["./prompts"] });
   for (const field of ["dependencies", "bundleDependencies", "bundledDependencies"]) expect(manifest()[field], field).toBeUndefined();
 });
@@ -47,8 +47,8 @@ it("the comchatx field carries no description, which the Plugins page never draw
 
 it("the template's line is the signed words: English in its description, Chinese in comchatx.prompts, and no Try it example of its own", async () => {
   const { loader } = await loadPackage(ROOT);
-  expect(loader.getPrompts().prompts.map((prompt) => prompt.description)).toEqual(["Tell cx which listings' Buy Box to guard and what it may change."]);
-  expect(manifest()["comchatx"]["prompts"]).toEqual({ "featured-offer-guard": { zh: "告诉 cx 守住哪些 listing 的 Buy Box，能改什么。" } });
+  expect(loader.getPrompts().prompts.map((prompt) => prompt.description)).toEqual(["Guard the Buy Box of [ASINs]. What you may change, and the lowest price: [instructions]"]);
+  expect(manifest()["comchatx"]["prompts"]).toEqual({ "featured-offer-guard": { zh: "守住【ASIN】的 Buy Box，可以改什么、最低价多少：【要求】" } });
   expect(manifest()["comchatx"]).not.toHaveProperty("tryIt");
 });
 
@@ -56,4 +56,8 @@ it("the card's name is comchatx.name, the one signed on 2026-11-11", () => {
   const field = (JSON.parse(readFileSync(join(ROOT, "package.json"), "utf8")) as { comchatx: { name?: unknown; nameZh?: unknown } }).comchatx;
   expect(field.name).toBe("Amazon Buy Box Guard");
   expect(field.nameZh).toBe("亚马逊 Buy Box 守护");
+});
+
+it("the README names no other plugin: what the package builds on is its manifest's builds, each optional one with its reason", () => {
+  for (const readme of ["README.md", "README.zh-CN.md"]) expect(readFileSync(join(ROOT, readme), "utf8")).not.toMatch(/npmjs\.com\/package/);
 });

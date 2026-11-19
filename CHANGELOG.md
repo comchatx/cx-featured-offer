@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.7
+
+- The README, in English and Chinese, no longer names other plugins, as signed on 2026-11-18: the Overview's first paragraph drops its last sentence ("It needs Amazon Listing Playbook, Amazon SP-API and Scheduled Tasks, which Plugins installs with it."), and the sentence on Keepa and Feishu in the later paragraph is removed. The Plugins page draws what the package builds on from `comchatx.builds`.
+- Each optional entry of `comchatx.builds` carries its reason in `why` (`en`, `zh`): `cx-keepa` 「用于让 cx 查原因时也看 Buy Box 的历史。」 / "Lets cx read the Buy Box's history as it looks for why.", `cx-feishu` 「用于让 cx 把检查结果发到你的飞书群。」 / "Sends each check's result to your Feishu group.", and a new optional `cx-amazon-seller` 「用于让 cx 从第一条消息起就知道你在亚马逊开店。」 / "Tells cx from the start that you sell on Amazon.".
+- The template's line is the words signed on 2026-11-17, written as the seller's own message: its `description` is "Guard the Buy Box of [ASINs]. What you may change, and the lowest price: [instructions]" and `comchatx.prompts["featured-offer-guard"].zh` is 「守住【ASIN】的 Buy Box，可以改什么、最低价多少：【要求】」.
+
 ## 0.1.6
 
 - The card's name is the one signed on 2026-11-17: "Amazon Buy Box Guard" on the English page (`comchatx.name`) and 「亚马逊 Buy Box 守护」 on the Chinese page (`comchatx.nameZh`).
