@@ -1,5 +1,5 @@
 ---
-description: Tell cx which listings' Buy Box to guard and what it may change.
+description: "Guard the Buy Box of [ASINs]. What you may change, and the lowest price: [instructions]"
 argument-hint: "<ASINs> <what you want, in your words>"
 ---
 Guard the Featured Offer of my listings $1 from my words: ${@:2}

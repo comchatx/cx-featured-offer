@@ -1,6 +1,6 @@
 {
   "name": "@comchatx/cx-featured-offer",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Has cx guard your Buy Box and fix what you allow when it's lost.",
   "license": "MIT",
   "author": "ComChatX",
@@ -20,18 +20,34 @@
       "@comchatx/cx-schedule",
       {
         "on": "cx-feishu",
-        "need": "optional"
+        "need": "optional",
+        "why": {
+          "en": "Sends each check's result to your Feishu group.",
+          "zh": "用于让 cx 把检查结果发到你的飞书群。"
+        }
       },
       "cx-listing-playbook",
       "cx-amazon-sp-api",
       {
         "on": "cx-keepa",
-        "need": "optional"
+        "need": "optional",
+        "why": {
+          "en": "Lets cx read the Buy Box's history as it looks for why.",
+          "zh": "用于让 cx 查原因时也看 Buy Box 的历史。"
+        }
+      },
+      {
+        "on": "cx-amazon-seller",
+        "need": "optional",
+        "why": {
+          "en": "Tells cx from the start that you sell on Amazon.",
+          "zh": "用于让 cx 从第一条消息起就知道你在亚马逊开店。"
+        }
       }
     ],
     "prompts": {
       "featured-offer-guard": {
-        "zh": "告诉 cx 守住哪些 listing 的 Buy Box，能改什么。"
+        "zh": "守住【ASIN】的 Buy Box，可以改什么、最低价多少：【要求】"
       }
     }
   },
