@@ -5,6 +5,8 @@ import { fileURLToPath } from "node:url";
 import { expect, it } from "vitest";
 import { loadPackage, scratch, typed } from "./pi.js";
 
+const SENTENCE = "Guard the Buy Box of [ASINs]. What you may change, and the lowest price: [instructions]";
+
 const ROOT = resolve(fileURLToPath(new URL("..", import.meta.url)));
 const manifest = (): Record<string, any> => JSON.parse(readFileSync(join(ROOT, "package.json"), "utf8"));
 
@@ -17,12 +19,14 @@ it("the pinned pi loads one template, /featured-offer-guard, and no skill or ext
   expect(loader.getExtensions().extensions).toEqual([]);
 });
 
-it("/featured-offer-guard shows as a command and expands with the seller's ASINs and words, no placeholder left", async () => {
-  const text = await typed(ROOT, "/featured-offer-guard B000123456,B000654321 丢了 Buy Box 先在底价以上修，修完在飞书告诉我");
-  expect(text.split("\n")[0]).toBe("Guard the Featured Offer of my listings B000123456,B000654321 from my words: 丢了 Buy Box 先在底价以上修，修完在飞书告诉我");
-  expect(text).toContain("first fix what lies within what I allowed");
-  expect(text).not.toMatch(/\$\{?[@0-9A]/);
-  expect(text).toContain("Where I said Feishu and no cx-feishu skill is listed, cx-feishu is not installed: tell me in this chat instead");
+it("/featured-offer-guard reaches the model as its sentence, and with words after it as the sentence then the words", async () => {
+  expect((await typed(ROOT, "/featured-offer-guard")).trim()).toBe(SENTENCE);
+  expect((await typed(ROOT, "/featured-offer-guard B000123456,B000654321 丢了 Buy Box 先在底价以上修，修完在飞书告诉我")).trim()).toBe(`${SENTENCE} B000123456,B000654321 丢了 Buy Box 先在底价以上修，修完在飞书告诉我`);
+});
+
+it("the template's body is its description word for word, then the seller's own words", () => {
+  const text = readFileSync(join(ROOT, "prompts", "featured-offer-guard.md"), "utf8");
+  expect(text.replace(/^---\n[\s\S]*?\n---\n/, "")).toBe(`${JSON.parse(/^description: (".*")$/m.exec(text)![1]!) as string} $@\n`);
 });
 
 it("is @comchatx/cx-featured-offer; the Plugins page installs every borrowed plugin from builds, and needs names cx-schedule alone, cx-feishu optional", () => {

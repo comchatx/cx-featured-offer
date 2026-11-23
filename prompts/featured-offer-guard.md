@@ -2,10 +2,4 @@
 description: "Guard the Buy Box of [ASINs]. What you may change, and the lowest price: [instructions]"
 argument-hint: "<ASINs> <what you want, in your words>"
 ---
-Guard the Featured Offer of my listings $1 from my words: ${@:2}
-
-Write my standing instruction for each listing in /tenant/listings/<ASIN>/featured-offer.md, quoting my words: how often to look, what you may change without asking me and the price below which you never go, where to tell me, and when to hand over to me. Ask me only what my words and my files leave open.
-
-Unless my words say otherwise: when an offer loses the Featured Offer, first fix what lies within what I allowed, then tell me what you found, what you changed and how. What you cannot fix comes back to me as a plan that names who does what, and where.
-
-Then set the schedule, and report to me where I said. Where I said Feishu and no cx-feishu skill is listed, cx-feishu is not installed: tell me in this chat instead, each time, and say once that it installs from Plugins.
+Guard the Buy Box of [ASINs]. What you may change, and the lowest price: [instructions] $@
