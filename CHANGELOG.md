@@ -3,6 +3,7 @@
 ## 0.1.8
 
 - The `featured-offer-guard` template sends its Try it sentence, word for word, then the words you type after its name.
+- A skill, `guard-instruction`, says that a listing's standing instruction is the file `/tenant/listings/<ASIN>/featured-offer.md`, that it holds your own words, and that you can read and change it.
 
 ## 0.1.7
 
