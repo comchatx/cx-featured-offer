@@ -4,6 +4,7 @@
 
 - The `featured-offer-guard` template sends its Try it sentence, word for word, then the words you type after its name.
 - A skill, `guard-instruction`, says that a listing's standing instruction is the file `/tenant/listings/<ASIN>/featured-offer.md`, that it holds your own words, and that you can read and change it.
+- `guard-instruction` has its line in the `/` list, at `comchatx.skills["guard-instruction"]`: 「说明每个 listing 守住 Buy Box 的要求存在哪里，你可以查看和修改。」 / "Where each listing's Buy Box instructions are kept, for you to read and change."
 
 ## 0.1.7
 

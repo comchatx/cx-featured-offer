@@ -18,6 +18,7 @@ it("the pinned pi loads one template, /featured-offer-guard, one skill, guard-in
   const skills = loader.getSkills();
   expect(skills.diagnostics).toEqual([]);
   expect(skills.skills.map((skill) => [skill.name, skill.filePath])).toEqual([["guard-instruction", join(ROOT, "skills", "guard-instruction", "SKILL.md")]]);
+  expect(manifest()["comchatx"]["skills"]).toEqual({ "guard-instruction": { zh: "说明每个 listing 守住 Buy Box 的要求存在哪里，你可以查看和修改。", en: "Where each listing's Buy Box instructions are kept, for you to read and change." } });
   expect(loader.getExtensions().extensions).toEqual([]);
 });
 
