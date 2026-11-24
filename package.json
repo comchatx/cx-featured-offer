@@ -1,6 +1,6 @@
 {
   "name": "@comchatx/cx-featured-offer",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Has cx guard your Buy Box and fix what you allow when it's lost.",
   "license": "MIT",
   "author": "ComChatX",
@@ -45,6 +45,12 @@
         }
       }
     ],
+    "skills": {
+      "guard-instruction": {
+        "zh": "说明每个 listing 守住 Buy Box 的要求存在哪里，你可以查看和修改。",
+        "en": "Where each listing's Buy Box instructions are kept, for you to read and change."
+      }
+    },
     "prompts": {
       "featured-offer-guard": {
         "zh": "守住【ASIN】的 Buy Box，可以改什么、最低价多少：【要求】"
@@ -62,11 +68,15 @@
   ],
   "type": "module",
   "pi": {
+    "skills": [
+      "./skills"
+    ],
     "prompts": [
       "./prompts"
     ]
   },
   "files": [
+    "skills",
     "prompts",
     "README.zh-CN.md"
   ],
