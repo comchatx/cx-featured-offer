@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.9
+
+- The tile's mark on the Plugins page is the signed drawing.
+
 ## 0.1.8
 
 - The `featured-offer-guard` template sends its Try it sentence, word for word, then the words you type after its name.
